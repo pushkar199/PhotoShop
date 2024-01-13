@@ -1,0 +1,108 @@
+.header__searchContainer {
+  width: 100%;
+  background-color: #96db78;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16), 0 2px 3px rgba(0, 0, 0, 0.23);
+}
+
+/* Media query for device smaller than 650px */
+@media only screen and (max-width: 650px) {
+  /* setting flex direction column */
+  .header__searchContainer {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  /* setting search bar to cover full width */
+  .header__searchBar {
+    flex: 1;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.header__logo {
+  flex: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkslategray;
+  cursor: pointer;
+}
+
+.header__logo > h2 {
+  margin-left: 5px;
+  margin-right: 10px;
+  height: fit-content;
+}
+
+.header__searchBar {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background: #f1f3f4;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0.7;
+  max-width: 720px;
+}
+
+.header__searchIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0 5px;
+  line-height: 0;
+}
+
+.header__searchInput {
+  background: transparent;
+  border: none;
+  font: normal 16px Google Sans, Roboto, RobotoDraft, Helvetica, Arial,
+    sans-serif;
+  height: 25px;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.header__categorySelect {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  background: #f1f3f4;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.header__categorySelect > select {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  color: rgb(34, 56, 56);
+  letter-spacing: 0.00625em;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Media query for devices smaller than 650px */
+/* reduce the size of the "select category" */
+@media only screen and (max-width: 650px) {
+  .header__categorySelect {
+    margin: 5px 0 0 auto;
+    min-height: 20px;
+    padding: 2px 10px;
+    border: 0.2px solid rgba(17, 17, 17, 0.1);
+  }
+  .header__categorySelect > select {
+    font-size: 12px !important;
+  }
+}

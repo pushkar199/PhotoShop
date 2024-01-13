@@ -1,0 +1,40 @@
+.cardWrapper__container {
+  columns: 3 25rem;
+  column-gap: 1rem;
+  width: 88%;
+  margin: 1rem auto 3rem auto;
+  text-align: center;
+}
+
+/* Media query to show imgCard in center in device smaller than 960px */
+@media only screen and (max-width: 960px) {
+  .cardWrapper__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    columns: initial;
+  }
+}
+
+/* Media query to to set cardWrapper__container width to reduce gap between imgCards in device 1020px-1400px */
+@media only screen and (min-width: 1020px) and (max-width: 1400px) {
+  .cardWrapper__container {
+    width: 55rem;
+  }
+}
+
+/* .................. */
+/* error page styling */
+.cardWrapper__errorPage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.cardWrapper__errorPage img {
+  width: 80vh;
+  object-fit: contain;
+}
